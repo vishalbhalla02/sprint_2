@@ -23,15 +23,14 @@ public class HotelBookingPage {
     By checkIn = By.id("checkIn");
     By checkOut = By.id("checkOut");
 
-    By priceSlider = By.id("mRange"); // may vary; adjust if needed
-    By priceText = By.id("demo"); // may vary; placeholder for actual price display
-
-    By pickupYes = By.id("yes"); // adjust if ID is different
+    By priceSlider = By.id("mRange"); 
+    By priceText = By.id("demo"); 
+    By pickupYes = By.id("yes"); 
 
     By guestRating = By.name("Rating");
     By location = By.name("location");
 
-    By message = By.id("message"); // textarea
+    By message = By.id("message"); 
 
     By submitBtn = By.id("submit");
     By output = By.id("output1");
@@ -111,10 +110,13 @@ public class HotelBookingPage {
 
 
     public String getDisplayedPrice() {
-        return driver.findElement(priceText).getText(); // Adjust as per actual ID
+        return driver.findElement(priceText).getText(); 
     }
     
     public boolean verifySuccessMessage() {
     	 return driver.findElement(output).isDisplayed();
+    }
+    public void browser_close() {
+    	driver.quit();
     }
 }

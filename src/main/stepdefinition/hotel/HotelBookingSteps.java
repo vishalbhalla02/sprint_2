@@ -1,8 +1,7 @@
-package stepdefinitions;
+package stepdefinition.hotel;
 
 import static org.testng.Assert.assertTrue;
 
-import org.openqa.selenium.WebDriver;
 import pages.HotelBookingPage;
 import io.cucumber.java.en.*;
 
@@ -38,6 +37,12 @@ public class HotelBookingSteps {
 
     @Then("the booking should be successful")
     public void the_booking_should_be_successful() {
-        assertTrue(hotelBookingPage.verifySuccessMessage(),"Success message was not displayed");
+        assertTrue(hotelBookingPage.verifySuccessMessage());
     }
+    
+    @And("Close the browser")
+    public void b_close() {
+    	hotelBookingPage.browser_close();
+    }
+    
 }
