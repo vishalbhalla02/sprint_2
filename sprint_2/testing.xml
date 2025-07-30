@@ -1,8 +1,0 @@
-<suite name="Full Booking Suite">
-    <test name="Hotel and Ticket Tests">
-        <classes>
-          	<class name="runners.HotelTestRunner"/>
-            <class name="runners.TicketTestRunner"/>
-        </classes>
-    </test>
-</suite>
